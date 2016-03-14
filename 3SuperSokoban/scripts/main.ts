@@ -59,6 +59,7 @@ namespace Game{
     // Set the variables to default, erase previous level
     mapSaved = [];
     playerPosition.x = 0, playerPosition.y = 0;
+<<<<<<< HEAD
 
     for(let row = 0; row < 12; row++){
       for(let column = 0; column < 16; column++){
@@ -66,15 +67,29 @@ namespace Game{
         // get the tile for x = column and y = row positions
         let actorTile = level.getTileAt(Layers.Actors, column, row);
 
+=======
+    
+    for(let column = 0; column < 12; column++){
+      for(let row = 0; row < 16; row++){
+        
+        // get the tile for x = row and y = column positions
+        let actorTile = level.getTileAt(Layers.Actors, row, column);
+        
+>>>>>>> 2b16739e7fe863713871b0ce8842af4ff602252a
         // Add the tile to the array
         mapSaved.push(actorTile);
 
         if(actorTile === Tiles.Start){
           // remove the Start tile and replace with empty tile
+<<<<<<< HEAD
           level.setTileAt(Layers.Actors, column, row, Tiles.Empty);
 
+=======
+          level.setTileAt(Layers.Actors, row, column, Tiles.Empty);
+          
+>>>>>>> 2b16739e7fe863713871b0ce8842af4ff602252a
           // set position to x, y on level map
-          playerPosition.add(column, row);
+          playerPosition.add(row, column);
         }
       }
     }
@@ -92,16 +107,16 @@ namespace Game{
     let boxesPositions = [];
     let targetsPositions = [];
 
-    for(let row = 0; row < 12; row++){
-      for(let column = 0; column < 16; column++){
+    for(let column = 0; column < 12; column++){
+      for(let row = 0; row < 16; row++){
 
-        // Take the tiles from two layers to coordinates column and row
-        let actorTile = level.getTileAt(Layers.Actors, column, row);
-        let worldTile = level.getTileAt(Layers.World, column, row);
+        // Take the tiles from two layers to coordinates row and column
+        let actorTile = level.getTileAt(Layers.Actors, row, column);
+        let worldTile = level.getTileAt(Layers.World, row, column);
 
         // If the actor tile is a box, keep the position
         if(actorTile === Tiles.Crate || actorTile === Tiles.Packet){
-          let position = new Sup.Math.Vector2(column, row);
+          let position = new Sup.Math.Vector2(row, column);
           boxesPositions.push(position);
 
           // we count the total number of crate
@@ -110,7 +125,7 @@ namespace Game{
 
         // If the world tile is a target, keep the position
         if(worldTile === Tiles.Target){
-          let position = new Sup.Math.Vector2(column, row);
+          let position = new Sup.Math.Vector2(row, column);
           targetsPositions.push(position);
         }
       }
@@ -155,9 +170,9 @@ namespace Game{
     let index : number = 0;
 
     // set all the actor tiles of the current level to the savedMap tile
-    for(let row = 0; row < 12; row++){
-      for(let column = 0; column < 16; column++){
-        level.setTileAt(Layers.Actors, column, row, mapSaved[index]);
+    for(let column = 0; column < 12; column++){
+      for(let row = 0; row < 16; row++){
+        level.setTileAt(Layers.Actors, row, column, mapSaved[index]);
         index++
       }
     }
