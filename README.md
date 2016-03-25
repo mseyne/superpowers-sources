@@ -24,5 +24,5 @@
 [11]: http://mseyne.itch.io/sokoban
 [12]: https://github.com/mseyne/superpowers-tutorials/tree/master/4SuperAsteroids
 [13]: https://www.gitbook.com/book/mseyne/super-asteroids-and-super-spacewar/details
-[14]: https://github.com/mseyne/superpowers-projects/tree/master/3SuperSokoban
+[14]: https://github.com/mseyne/superpowers-projects/tree/master/4SuperAsteroids
 [15]: http://mseyne.itch.io/sokoban
