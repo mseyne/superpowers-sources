@@ -9,10 +9,10 @@
 5. Super Pacman :
 ...
 
-* [Free Licence CC0][1]
+* [Peer Production Licence][1]
 * [Font Open Sans][2]
 
-[1]: https://creativecommons.org/publicdomain/zero/1.0/
+[1]: http://p2pfoundation.net/Peer_Production_License
 [2]: https://fr.wikipedia.org/wiki/Open_Sans
 [3]: https://github.com/mseyne/superpowers-tutorials/tree/master/1SuperPong
 [4]: https://github.com/mseyne/superpowers-projects/tree/master/1SuperPong
